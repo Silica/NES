@@ -1,0 +1,22 @@
+enum hoge
+{
+	a = 97;
+	b = 98;
+	c,d,e,f,
+	p = 112,q,r,
+	z = 122
+}
+
+def main
+{
+	putchar(hoge.a);
+	putchar(hoge.b);
+	putchar(hoge.c);
+	putchar(hoge.d);
+	putchar(hoge.e);
+	putchar(hoge.f);
+	putchar(hoge.p);
+	putchar(hoge.q);
+	putchar(hoge.r);
+	putchar(hoge.z);
+}

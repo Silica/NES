@@ -1,0 +1,49 @@
+def main()
+{
+	var f : (int,int):int;
+
+	f = add;
+	printint(f(1, 2));
+
+	f = sub;
+	printint(f(20, 5));
+
+	f = mul;
+	printint(f(12, 13));
+}
+
+def add(a : int, b : int) : int
+	return a + b;
+
+def sub(a : int, b : int) : int
+	return a - b;
+
+def mul(a : int, b : int) : int
+	return a * b;
+
+def printint(a : int)
+{
+	var str : char[12];
+	var p = 0;
+	if (a >= 1000000000)
+		str[p++] = '0' + a / 1000000000;
+	if (a >= 100000000)
+		str[p++] = '0' + a / 100000000 % 10;
+	if (a >= 10000000)
+		str[p++] = '0' + a / 10000000 % 10;
+	if (a >= 1000000)
+		str[p++] = '0' + a / 1000000 % 10;
+	if (a >= 100000)
+		str[p++] = '0' + a / 100000 % 10;
+	if (a >= 10000)
+		str[p++] = '0' + a / 10000 % 10;
+	if (a >= 1000)
+		str[p++] = '0' + a / 1000 % 10;
+	if (a >= 100)
+		str[p++] = '0' + a / 100 % 10;
+	if (a >= 10)
+		str[p++] = '0' + a / 10 % 10;
+	str[p++] = '0' + a % 10;
+	str[p] = '\0';
+	puts(str);
+}

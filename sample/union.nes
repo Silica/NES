@@ -1,0 +1,14 @@
+union cast
+{
+	i : int;
+	c : char;
+}
+
+def main
+{
+	var x : cast;
+
+	x.c = 'a';
+
+	putchar(x.i);
+}
