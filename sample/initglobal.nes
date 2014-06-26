@@ -1,0 +1,42 @@
+def main()
+{
+	printint(g_var1);
+	printint(g_var2);
+	printint(g_var3);
+}
+
+var g_var1 : int = 40 * 30;
+var g_var2 : int = add(10, 20);
+var g_var3 : int = fib(10);
+
+def printint(a : int)
+{
+	var str : char[12];
+	var p = 0;
+	if (a >= 1000000000)
+		str[p++] = '0' + a / 1000000000;
+	if (a >= 100000000)
+		str[p++] = '0' + a / 100000000 % 10;
+	if (a >= 10000000)
+		str[p++] = '0' + a / 10000000 % 10;
+	if (a >= 1000000)
+		str[p++] = '0' + a / 1000000 % 10;
+	if (a >= 100000)
+		str[p++] = '0' + a / 100000 % 10;
+	if (a >= 10000)
+		str[p++] = '0' + a / 10000 % 10;
+	if (a >= 1000)
+		str[p++] = '0' + a / 1000 % 10;
+	if (a >= 100)
+		str[p++] = '0' + a / 100 % 10;
+	if (a >= 10)
+		str[p++] = '0' + a / 10 % 10;
+	str[p++] = '0' + a % 10;
+	str[p] = '\0';
+	puts(str);
+}
+
+def fib(n : int) : int
+	return (n < 2) ? 1 : (fib(n-1) + fib(n-2));
+
+def add(a : int, b : int) : int return a + b;

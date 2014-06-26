@@ -1,0 +1,31 @@
+def main
+{
+	var i = 100;
+	while (i < 110)
+	{
+		if (i == 102)
+		{
+			i++;
+			continue;
+		}
+		putchar(i);
+		i++;
+	}
+	else
+	{
+		puts("while else!");
+	}
+	i = 100;
+
+	while (i < 110)
+	{
+		if (i == 105)
+			break;
+		putchar(i);
+		i++;
+	}
+	else
+	{
+		puts("while else!");
+	}
+}
